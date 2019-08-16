@@ -39,6 +39,14 @@ Docker rm -f contenedor_demo
 # nos permite eliminar imagenes
 Docker rmi -f miImagen
 
+# Ejemplo imagen de mysql
+
+docker run -d -p 3310:3306 --name mysql_server \ -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \ -e MYSQL_ROOT_PASSWORD=toor -e MYSQL_DATABASE=demobd \ -e MYSQL_ROOT_HOST=% \ mysql:latest --default-authentication-plugin=mysql_native_password
+
+¡¡IMPORTANTE!!
+--default-authentication-plugin=mysql_native_password 
+* esta propiedad nos permite autenticarnos desde afuera de nuestro contenedor.
+
 
 
 
