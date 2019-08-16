@@ -15,7 +15,8 @@ Docker build -t nombre_imagen_contexto ./path
 * y el puerto 8080 es el puerto que expone mi contenedor
 * --name especificamos el nombre de nuestro contenedor
 * miImagen es la imagen que tomamos como referencia ya creada
-Docker run -d -p 8001:8080 --name contenedor-demo miImagen
+
+- Docker run -d -p 8001:8080 --name contenedor-demo miImagen
 
 # nos permite mirar los logs de un contenedor docker
 Docker logs contenedor-demo
