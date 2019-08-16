@@ -47,7 +47,13 @@ docker run -d -p 3310:3306 --name mysql_server \ -e MYSQL_ALLOW_EMPTY_PASSWORD=y
 --default-authentication-plugin=mysql_native_password 
 * esta propiedad nos permite autenticarnos desde afuera de nuestro contenedor.
 
+# Desplegar docker en AWS EC2
 
-
+1. instalar docker en nuestra EC2/ sudo amazon-linux-extras install docker
+2. subir nuestra imagen a nuestro repo en docker hub / docker push nombreUsuario_docker_hub/imagen_local
+3. para correr la imagen en nuestro contenedor desde una imagen en docker hub tenemos que teclear el comando:
+sudo usermod -aG docker $USER
+4. corremos nuestro contenedor a partir de la imagen que tengamos en nuestro docker hub:
+docker run -p 8050:8080 nombreUsuario_docker_hub/imagen_local 
 
 
